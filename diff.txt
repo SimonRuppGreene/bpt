@@ -1,0 +1,39 @@
+451,453c451,452
+< 
+< 		if (!n->is_leaf) {
+< 			for (i = 0; i <= n->num_keys; i++) {
+---
+> 		if (!n->is_leaf)
+> 			for (i = 0; i <= n->num_keys; i++)
+455,457d453
+< 			}
+< 		}
+< 
+555,557c551
+< 			// EDIT
+< 			// if (key >= c->keys[i]) i++;
+< 			if (key <= c->keys[i]) i++;
+---
+> 			if (key >= c->keys[i]) i++;
+677,680c671
+< 
+< 	// EDIT
+< 	// while (insertion_point < leaf->num_keys && leaf->keys[insertion_point] < key)
+< 	while (insertion_point < leaf->num_keys && leaf->keys[insertion_point] > key)
+---
+> 	while (insertion_point < leaf->num_keys && leaf->keys[insertion_point] < key)
+687d677
+< 
+722,725c712
+< 
+< 	// EDIT
+< 	// while (insertion_index < order - 1 && leaf->keys[insertion_index] < key)
+< 	while (insertion_index < order - 1 && leaf->keys[insertion_index] > key)
+---
+> 	while (insertion_index < order - 1 && leaf->keys[insertion_index] < key)
+729,731c716
+< 		if (j == insertion_index) {
+< 			j++;
+< 		}
+---
+> 		if (j == insertion_index) j++;
